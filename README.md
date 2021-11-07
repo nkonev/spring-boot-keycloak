@@ -25,4 +25,6 @@ Configuring Keycloak - adding user:
 # Login as user1 (get 3 tokens)
 ```bash
 curl -i -H 'Content-Type: application/x-www-form-urlencoded' 'http://localhost:8484/auth/realms/my_realm/protocol/openid-connect/token' -d 'client_id=my_client&grant_type=password&scope=openid&username=user1&password=user1'
+
+curl -Ss -H 'Content-Type: application/x-www-form-urlencoded' 'http://localhost:8484/auth/realms/my_realm/protocol/openid-connect/token' -d 'client_id=my_client&grant_type=password&scope=openid&username=user1&password=user1' | jq '.'
 ```
