@@ -1,5 +1,6 @@
 # spring-boot-keycloak
 Using spring boot and Keycloak authorization server
+https://habr.com/en/amp/post/552346/
 
 Keycloak login/password - see in docker-compose.yml
 
