@@ -16,8 +16,7 @@ services:
     image: jboss/keycloak:15.0.2
     container_name: keycloak
     volumes:
-      - ./keycloak/realm-export.json:/opt/jboss/keycloak/imports/realm-export.json:z
-      - ./keycloak/keycloak-add-user.json:/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json:z
+      - ./keycloak/realm-export.json:/opt/jboss/keycloak/imports/realm-export.json:ro,z
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
