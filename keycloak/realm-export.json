@@ -452,6 +452,28 @@
       },
       "notBefore": 0,
       "groups": []
+    },
+    {
+      "id" : "b5d67207-0996-4af0-bcb5-eee814687b30",
+      "createdTimestamp" : 1636327819845,
+      "username" : "user",
+      "enabled" : true,
+      "totp" : false,
+      "emailVerified" : true,
+      "firstName" : "",
+      "lastName" : "",
+      "credentials" : [ {
+        "id" : "8110e6f0-71a7-4eb2-aecc-de0095e5b37a",
+        "type" : "password",
+        "createdDate" : 1636327836785,
+        "secretData" : "{\"value\":\"J24uqagVaVioV5w2G7rVq2Nl5VwyULu9GruPD/1A8VQDLnmC2RzXK5wHjEL/MVaFtgJh9OKuDN3HmcOEUh0DKw==\",\"salt\":\"Qf0MM1Frb2MLlhJk+ASBPQ==\",\"additionalParameters\":{}}",
+        "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+      } ],
+      "disableableCredentialTypes" : [ ],
+      "requiredActions" : [ ],
+      "realmRoles" : [ "default-roles-my_realm", "USER" ],
+      "notBefore" : 0,
+      "groups" : [ ]
     }
   ],
   "scopeMappings": [
