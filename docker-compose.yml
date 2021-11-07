@@ -3,7 +3,7 @@ version: "3.8"
 services:
   postgres:
     container_name: postgres
-    image: library/postgres
+    image: library/postgres:14.0
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
@@ -13,11 +13,11 @@ services:
     restart: unless-stopped
 
   keycloak:
-    image: jboss/keycloak
+    image: jboss/keycloak:15.0.2
     container_name: keycloak
     volumes:
-      - ./keycloak/realm-export.json:/opt/jboss/keycloak/imports/realm-export.json
-      - ./keycloak/keycloak-add-user.json:/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json
+      - ./keycloak/realm-export.json:/opt/jboss/keycloak/imports/realm-export.json:z
+      - ./keycloak/keycloak-add-user.json:/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json:z
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
