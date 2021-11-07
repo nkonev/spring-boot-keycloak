@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
 
   keycloak:
-    image: jboss/keycloak:14.0.0
+    image: jboss/keycloak:15.0.2
     container_name: keycloak
     volumes:
       - ./keycloak/realm-export.json:/opt/jboss/keycloak/imports/realm-export.json:z
