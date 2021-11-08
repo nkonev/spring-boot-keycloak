@@ -29,7 +29,7 @@ curl -i -H 'Content-Type: application/x-www-form-urlencoded' 'http://localhost:8
 curl -Ss -H 'Content-Type: application/x-www-form-urlencoded' 'http://localhost:8484/auth/realms/my_realm/protocol/openid-connect/token' -d 'client_id=my_client&grant_type=password&scope=openid&username=user1&password=user_password' | jq '.'
 ```
 
-# How to save added users to keycloak-import.json ?
+# How to save added users to realm-export.json ?
 from https://github.com/nkonev/videochat/tree/062aaf2ea58edcffadf6ddf768e289273801492a
 
 ## 1. exporting (not always importable)
@@ -47,4 +47,4 @@ docker cp $(docker ps --format {{.Names}} | grep keycloak):/tmp/export.json ./ex
 
 ## 2. Next find "users" JSON array. Then find required user's document by their name.
 
-## 3. Append user's document to existing keycloak-import.json under "users" array.
+## 3. Append user's document to existing realm-export.json under "users" array.
